@@ -1,2 +1,4 @@
 # landing_page
-local business landing page built with css flexbox and js
+local business product landing page built with css flexbox and js
+
+https://nikolaperisic.github.io/landing_page/
