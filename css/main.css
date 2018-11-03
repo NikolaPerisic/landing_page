@@ -1,0 +1,510 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: #f7f1e3;
+    margin: 0 auto;
+}
+
+/************************************************************/
+/***************************  NAVBAR ************************/
+/************************************************************/
+.navbar {
+    font-size: 18px;
+    background-image: linear-gradient(-45deg, brown, orange);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-link,
+.logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+.logo img {
+    width: 50px;
+    height: auto;
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+.active {
+    display: block;
+}
+
+/************************************************************/
+/***************************  HOME ************************/
+/************************************************************/
+
+.home-section {
+    background: url("../img/coffee1.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+
+}
+
+.home-text-box {
+    background-color: rgba(0,0,0,0.39);
+    flex: 1;
+    margin: auto 20px;
+    padding: 2.5em;
+    max-width: 800px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 17px 41px 8px rgba(0,0,0,0.49);
+    overflow: auto;
+
+}
+.home-text-box h1 {
+    line-height: 1.2em;
+}
+
+.home-text-box p {
+    padding: 20px;
+}
+.buttons-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.buttons-box a {
+    text-decoration: none;
+}
+
+.buttons {
+    color: #FFF;
+    margin: 5px;
+    transition: all 0.3s;
+    position: relative;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+}
+
+.buttons span {
+    transition: all 0.3s;
+}
+
+.buttons::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+}
+.buttons:hover span {
+    letter-spacing: 2px;
+}
+.buttons:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+}
+.buttons::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.2);
+}
+.buttons:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+
+/************************************************************/
+/***************************  FEATURES ************************/
+/************************************************************/
+
+.features-section {
+    
+    background-color: #f7f1e3;
+    overflow: auto;
+    
+}
+.features-head {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: linear-gradient(90deg,#e46506 0%, #e7f217 80%);
+}
+
+.features-head h2 {
+    font-size: 200%;
+}
+
+.features-box-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5em 0.5em;
+}
+
+.features-box {
+    background-color: transparent;
+    color: #485460;
+    flex: 1;
+    margin: 1em;
+    padding: 5px;
+    text-align: center;
+}
+
+/************************************************************/
+/***************************  PRODUCTS ************************/
+/************************************************************/
+
+.products-section {
+    background-image: url("../img/coffee-917613_1920.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.products-head, .video-head, .contact-head {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: linear-gradient(90deg,#e46506 0%, #e7f217 80%);
+}
+
+.products-head h2, .video-head h2 {
+    font-size: 200%;
+}
+
+.products-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-box {
+    background-color: rgba(0,0,0,0.8);
+    max-width: 600px;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.products-box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    flex: 1;   
+}
+
+.products-box p, h4 {
+    text-align: center;
+    padding: 15px;
+}
+
+.products-box h4 {
+    max-height: 10px;
+}
+
+.products-box-inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 3;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+/************************************************************/
+/***************************  VIDEO ************************/
+/************************************************************/
+
+.video-section {
+    background-color: #84817a;
+    
+}
+
+.video-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+.video-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/************************************************************/
+/***************************  CONTACT ************************/
+/************************************************************/
+.contact-section {
+    background-color: #f7f1e3;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.contact-section-wrapper {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 50%;
+    max-width: 800px;
+    background-color: rgba(247,183,49,0.8);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 17px 41px 8px rgba(0,0,0,0.49);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #485460;
+    letter-spacing: 2px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.message textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.message, .email-input {
+    padding-top: 10px;
+}
+
+
+.send-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.send-button {
+    background-color: #ac8022;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 40px;
+    width: 100px;
+    margin: 10px;
+    border: 0px solid;
+  }
+
+.send-button:hover {
+    background: rgba(0,0,0,0);
+    color: #696969;
+    box-shadow: inset 0 0 0 3px #696969;
+}
+
+/************************************************************/
+/***************************  FOOTER ************************/
+/************************************************************/
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer {
+    padding: 20px;
+    background-color: #945047;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-nav {
+    list-style: none;
+}
+
+.footer-nav h4,
+.contact {
+    font-size: 120%;
+}
+footer a {
+    text-decoration: none;
+}
+
+footer a:link,
+footer a:visited {
+    color: #2bcbba;
+    transition: 0.3s;
+    margin-top: 5px;;
+}
+
+footer a:hover,
+footer a:active {
+    color: #FF851B;
+    text-decoration: none;
+}
+
+hr {
+    width: 60%;
+    margin: 10px auto;
+}
+
+/************************************************************/
+/*********************  MEDIA QUERIES ***********************/
+/************************************************************/
+
+@media screen and (max-width: 420px) {
+    .features-box-wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .products-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-section-wrapper {
+        width: 100%;
+        height: 93.5%;
+        border: none;
+        box-shadow: none;
+        border-radius: 0px;
+
+    }
+
+    .home-text-box {
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        margin: 0 auto;
+        padding-top: 150px
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .nav-link {
+        margin-left: 40px;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .logo:hover,
+    .nav-link:hover {
+        color: rgba(133,68,66, 1);
+    }
+}
+
